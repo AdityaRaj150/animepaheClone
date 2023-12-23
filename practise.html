@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slanted-border {
+  position: relative; /* Establishes a positioning context for pseudo-elements */
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  background-color: #f0f0f0;
+  overflow: hidden; /* Hides overflowing content (optional) */
+}
+
+.slanted-border::before,
+.slanted-border::after {
+  content: '';
+  position: absolute; /* Position relative to the .slanted-border */
+  top: 0;
+  bottom: 0;
+  width: 50%; /* Half of the width of .slanted-border */
+  background-color: #3498db; /* Background color of the slanted border */
+  transform: skewX(-20deg); /* Skew the pseudo-element to create the slant */
+} 
+ .slanted-border::before {
+  left: 0.1; /* Positioned at the left edge of .slanted-border */
+}
+
+.slanted-border::after {
+  right: 0.0001; /* Positioned at the right edge of .slanted-border */
+}  */
+
+.slanted-border h1 {
+    position: absolute;
+    z-index: 2;
+    
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="slanted-border">
+        <h1>let's see!</h1>
+    </div>
+    
+</body>
+</html>
